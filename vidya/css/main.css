@@ -1,1 +1,13 @@
-.hero-
+body {
+  background: black;
+}
+
+.hero-heading {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 144px;
+  color: #FFFFFF;
+  letter-spacing: 4.8px;
+  line-height: 173px;
+  text-align: center;
+}
