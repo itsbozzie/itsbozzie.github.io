@@ -7,6 +7,7 @@ HEADER STUFF
 .gallery-header {
   margin-top: 60px;
   margin-bottom: 64px;
+  padding-left: 15px;
 }
 
 /*The "index" heading text*/
@@ -44,6 +45,10 @@ HEADER STUFF
 }
 
 /*Changing selection of search field to /white*/
+
+.heading-field::-moz-selection {
+  background: white;
+}
 
 .heading-field::selection {
   background: white;
@@ -89,6 +94,87 @@ HEADER STUFF
 GALLERY ITEM STUFF
 ==============================*/
 
-.game-thumb {
+/*.game-item (entire gallery item)*/
 
+.game-item {
+  cursor: pointer;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+.game-item:hover {
+  background: #0d0d0d;
+}
+
+/*.game-thumb (video thumbnail container of game)*/
+
+.game-thumb {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: grey;
+  overflow:hidden;
+  /*Filters*/
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  /*Transitions*/
+  -webkit-transition: -webkit-filter .2s ease-in-out;
+  transition: -webkit-filter .2s ease-in-out;
+  transition: filter .2s ease-in-out;
+  transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+}
+
+
+.game-item:hover .game-thumb {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+/*video inside of .game-thumb*/
+
+.video {
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -90%);
+	        transform: translate(-50%, -90%);
+	z-index: 0;
+}
+
+.game-title {
+  font-family: Helvetica;
+  font-size: 24px;
+  color: #FFFFFF;
+  line-height: 29px;
+}
+
+.game-desc {
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 22px;
+}
+
+
+.game-tag {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid #F5A623;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 16px;
+  color: #F5A623;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.game-tag:hover {
+  background: #F5A623;
+  color: black;
 }
