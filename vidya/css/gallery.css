@@ -1,10 +1,17 @@
-.page-container {
-  width: 1240px;
-  height: 100%;
-  margin: 0 6.944%;
+/*==============================
+HEADER STUFF
+==============================*/
+
+/*The header*/
+
+.gallery-header {
+  margin-top: 60px;
+  margin-bottom: 64px;
 }
 
-.gallery-heading {
+/*The "index" heading text*/
+
+.gallery-header-text {
   display: inline-block;
   font-family: Helvetica;
   font-weight: bold;
@@ -14,12 +21,15 @@
   line-height: 86px;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
-  margin-bottom: 64px;
+  cursor: default;
+  min-width: 255px;
 }
+
+/*search field*/
 
 .heading-field {
   display: inline-block;
+  width: calc(100% - 255px);
   font-family: Helvetica;
   font-weight: bold;
   font-size: 72px;
@@ -33,17 +43,23 @@
           user-select: text;
 }
 
+/*Changing selection of search field to /white*/
+
 .heading-field::selection {
   background: white;
 }
 
-.gallery-heading::after {
+/*Adding additional / after h1 heading*/
+
+.gallery-header-text::after {
   margin-left: 10px;
   content: "/";
   color: #222;
   -webkit-transition: .2s;
   transition: .2s;
 }
+
+/*::after Stylings to match colour of search field on interaction*/
 
 .is-focussed::after {
   color: #545454 !important;
@@ -53,6 +69,7 @@
   color: #323232;
 }
 
+/*Search bar placeholder stylings*/
 
 .heading-field[placeholder] {
   opacity: .2;
@@ -66,4 +83,12 @@
 
 .heading-field:focus[placeholder] {
   opacity: .5;
+}
+
+/*==============================
+GALLERY ITEM STUFF
+==============================*/
+
+.game-thumb {
+
 }

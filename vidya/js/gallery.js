@@ -1,16 +1,16 @@
 $(document).ready(function() {
   // On Focus
   $('#auto-complete').on('focus', function() {
-    $('.gallery-heading').addClass('is-focussed')
+    $('.gallery-header-text').addClass('is-focussed')
   // On Blur (non-focus)
   }).on("blur", function(){
-    $('.gallery-heading').removeClass('is-focussed')
+    $('.gallery-header-text').removeClass('is-focussed')
   // On Hover
 }).on('mouseenter', function(){
-    $('.gallery-heading').addClass('is-hovered'
+    $('.gallery-header-text').addClass('is-hovered')
   // On MouseLeave
-  )}).on('mouseleave', function(){
-    $('.gallery-heading').removeClass('is-hovered')
+  }).on('mouseleave', function(){
+    $('.gallery-header-text').removeClass('is-hovered')
   });
 
 });
