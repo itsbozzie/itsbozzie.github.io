@@ -6,7 +6,7 @@ HEADER STUFF
 
 .gallery-header {
   margin-top: 60px;
-  margin-bottom: 64px;
+  margin-bottom: 20px;
   padding-left: 15px;
 }
 
@@ -94,9 +94,15 @@ HEADER STUFF
 GALLERY ITEM STUFF
 ==============================*/
 
+.gallery {
+  height: calc(100vh - 228px);
+  overflow: scroll;
+}
+
 /*.game-item (entire gallery item)*/
 
 .game-item {
+  display: none;
   cursor: pointer;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -112,8 +118,8 @@ GALLERY ITEM STUFF
 
 .game-thumb {
   width: 100%;
-  padding-bottom: 56.25%;
-  background: grey;
+  height: 140px;
+  background: none;
   overflow:hidden;
   /*Filters*/
   -webkit-filter: grayscale(1);
@@ -134,7 +140,7 @@ GALLERY ITEM STUFF
 /*video inside of .game-thumb*/
 
 .video {
-	height: 100%;
+  width: 100%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -177,4 +183,21 @@ GALLERY ITEM STUFF
 .game-tag:hover {
   background: #F5A623;
   color: black;
+}
+
+
+/*Media Queryies*/
+
+
+@media screen and (max-width: 700px) {
+  .gallery-header-text {
+    text-align: center;
+    width: 100%;
+  }
+  .gallery-header-text::after {
+    display: none;
+  }
+  .heading-field {
+    display: none;
+  }
 }
